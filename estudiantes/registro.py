@@ -23,3 +23,12 @@ def ordenarEstudiantes(estudiantes):
         print(nombre.ljust(30),nota)
 
 ordenarEstudiantes(estudiantesValidos)
+
+def promedioNotas(estudiantes):
+    suma = 0
+    for nombre, nota in estudiantes:
+        suma += nota
+    promedio = suma / len(estudiantes)
+    print ("\n","El promedio de las notas es: ",promedio.round(2))
+
+promedioNotas(estudiantesValidos)
