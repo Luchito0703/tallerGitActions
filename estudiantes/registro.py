@@ -13,4 +13,13 @@ def revisarEstudiantes(csv):
             validos.append((nombre, nota))
     return validos
 
-print(revisarEstudiantes(csv))
+estudiantesValidos = revisarEstudiantes(csv)
+
+def ordenarEstudiantes(estudiantes):
+    estudiantes.sort()
+    print("Nombre".ljust(30), "Nota") #ljust es para alinear a la izquierda
+    print("-" * 35)
+    for nombre, nota in estudiantes:
+        print(nombre.ljust(30),nota)
+
+ordenarEstudiantes(estudiantesValidos)
