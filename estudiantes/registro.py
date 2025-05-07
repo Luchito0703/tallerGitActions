@@ -13,8 +13,6 @@ def revisarEstudiantes(csv):
             validos.append((nombre, nota))
     return validos
 
-estudiantesValidos = revisarEstudiantes(csv)
-
 def ordenarEstudiantes(estudiantes):
     estudiantes.sort()
     print("Nombre".ljust(30), "Nota") #ljust es para alinear a la izquierda
@@ -22,13 +20,9 @@ def ordenarEstudiantes(estudiantes):
     for nombre, nota in estudiantes:
         print(nombre.ljust(30),nota)
 
-ordenarEstudiantes(estudiantesValidos)
-
 def promedioNotas(estudiantes):
     suma = 0
     for nombre, nota in estudiantes:
         suma += nota
     promedio = suma / len(estudiantes)
-    print ("\n","El promedio de las notas es: ",promedio.round(2))
-
-promedioNotas(estudiantesValidos)
+    return promedio.round(2)
