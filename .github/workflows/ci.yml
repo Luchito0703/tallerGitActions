@@ -17,6 +17,7 @@ jobs:
       - name: Install requirements
         run: |
           python -m pip install --upgrade pip
+          pip install pandas
       - name: Run application
         run: |
           python main.py
